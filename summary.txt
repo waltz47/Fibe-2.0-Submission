@@ -1,0 +1,22 @@
+For the text classification task, we finetuned distilGPT-2.
+DistilGPT-2 is a distilled smaller version of the GPT-2 model released by OpenAI, smaller in size with almost the same performance as the bigger models. 
+
+The training was done with a batch size of 16 and took about 15 hours on a single A100 GPU. Training was done on Google Colab (Utilizing abour 40 GB VRAM for the entire duration)
+The context length was set to 1024 (This is the maximum Supported by GPT-2 and its variants)
+
+We were able to get to a training loss of 0.1040 and validation loss of 0.1118 after 2 epochs.
+
+There are two scripts:
+    - gpt-finetune : Script used to finetune GPT-2 on the dataset. It has the training and prediction code.
+    - clean : Script used to clean the output csv.
+
+The other files are:
+    - fibe-1024-distilgpt2-full : The finetuned distilgpt-2 model
+    - fibe_out_all_1024.csv : Prediction csv from the model (Still has to be cleaned and properly formatted as per the output requirement).
+    - answer.csv : the final submission.
+
+Thanks,
+
+Team: AINexus
+Team members: Paramveer Singh Yadav, Radhika Kankaria
+
